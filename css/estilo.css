@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+ background-color:#495057 ;
+ display: flex;
+ justify-content: center;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1; 
+    padding: 5px 10px 5px 10px;
+    background-color:#adb5bd;
+    margin-top: 30px;
+    animation-name: escalaImagen;
+    animation-duration: 0.5s;
+    box-shadow: 0 0 30px;
+}
+
+.image{
+    height:180px;
+    width: 180px;
+    margin: 10px 5px;
+    background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 0;
+    animation-name: escalaImagen;
+    animation-duration: 0.9s;
+}
+
+.image:hover{
+    filter: grayscale(0%);
+    transition: 0.5s ;
+}
+
+.cont_img{
+    display: inline-block;
+}
+
+.foco{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: grayscale(0%);
+    animation-name: escalaImagen;
+    animation-duration: 0.5s;
+}
+
+@keyframes escalaImagen{
+    0%{transform: scale(0);}
+    10%{transform: scale(0.1);}
+    20%{transform: scale(0.2);}
+    30%{transform: scale(0.3);}
+    40%{transform: scale(0.4);}
+    50%{transform: scale(0.5);}
+    60%{transform: scale(0.6);}
+    70%{transform: scale(0.7);}
+    80%{transform: scale(0.8);}
+    90%{transform: scale(0.9);}
+    100%{transform: scale(1);}
+}
